@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Síriu end Andromeda</title>
+<meta name="description" content="Site interativo com abas para apresentação de informações e contato.">
+<meta name="keywords" content="site, abas, interativo, HTML, CSS, JavaScript">
+<meta name="author" content="Seu Nome">
+<style>
+    /* Estilos Globais */
+    .container {
+            display: flex;
+            align-items: center; /* Centraliza verticalmente */
+            gap: 20px; /* Espaçamento entre a foto e o texto */
+        }
+        .texto {
+            font-family: Arial, sans-serif;
+            font-size: 16px;
+            line-height: 1.5; /* Espaçamento entre linhas do texto */
+        }
+    .imagem1{
+
+
+        width: 350px;
+            height: 400px;
+            display: block; /* Necessário para garantir o comportamento como bloco */
+            margin: 20px; /* Espaçamento ao redor da imagem */
+            border: 5px solid black; /* Borda sólida de 5px na cor preta */
+            padding: 5px; /* Espaço interno entre a borda e a imagem */
+            border-radius: 15px; /* Bordas arredondadas */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Sombra ao redor da moldura */
+            float: left; /* Posiciona a imagem à esquerda */
+    }
+    h1{
+        font-family: Georgia, 'Times New Roman', Times, serif;
+            font-size: 60px;
+            color: rgba(149, 156, 218, 0.822);
+            text-shadow: 2px 2px 2px black; 
+            animation: fadeIn 2s ease-in-out;
+
+    }
+    button{
+        font-style: italic;
+    }
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        line-height: 1.6;
+    }
+    header {
+        background: linear-gradient(to right, #ff9a9e, #fad0c4);
+        color: white;
+        padding: 20px 0;
+        text-align: center;
+    }
+    
+
+
+
+    nav {
+        background: #333;
+    }
+    nav ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+    }
+    nav ul li {
+        margin: 0 15px;
+    }
+    nav ul li a {
+        color: white;
+        text-decoration: none;
+        font-weight: bold;
+        padding: 10px;
+    }
+    nav ul li a:hover, nav ul li a.active {
+        background: #555;
+        border-radius: 5px;
+    }
+    main {
+        padding: 20px;
+    }
+    footer {
+        background: #333;
+        color: white;
+        text-align: center;
+        padding: 10px 0;
+        position: relative;
+        bottom: 0;
+        width: 100%;
+    }
+    .tab-content {
+        display: none;
+        opacity: 0;
+        transition: opacity 0.3s ease-in-out;
+    }
+    .tab-content.active {
+        display: block;
+        opacity: 1;
+    }
+    @media (max-width: 600px) {
+        nav ul {
+            flex-direction: column;
+            align-items: center;
+        }
+        nav ul li {
+            margin: 10px 0;
+        }
+    }
+
+    /* Estilos para galeria interativa */
+    .gallery {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 15px;
+        margin-top: 50px;
+    }
+    .gallery img {
+        width: 100%;
+        height: auto;
+        border-radius: 10px;
+        transition: transform 0.3s ease;
+    }
+    .gallery img:hover {
+        transform: scale(1.05);
+    }
+    /* Botão de alternância de tema */
+    .theme-toggle {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        background: #333;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        cursor: pointer;
+        border-radius: 5px;
+        font-size: 14px;
+        transition: background 0.3s ease;
+    }
+    .theme-toggle:hover {
+        background: #555;
+    }
+    body.dark-mode {
+        background-color: #121212;
+        color: white;
+    }
+    body.dark-mode nav ul li a {
+        color: #ccc;
+    }
+    </style>
+</head>
+<body>
+<noscript>
+    <p style="color: red; text-align: center;">JavaScript está desativado no seu navegador. Algumas funcionalidades podem não funcionar corretamente.</p>
+</noscript>
+
+<!-- Cabeçalho -->
+<header>
+<h1>AMOR PARA O INFINITO</h1>
+<p>PARA HELOANY DOS SANTOS CAMELO (VULGO AMORZINHO)</p>
+</header>
+
+<!-- Navegação -->
+<nav>
+<ul>
+    <li><a href="#" class="tab-link active" data-tab="inicio" aria-selected="true">AMOR</a></li>
+    <li><a href="#" class="tab-link" data-tab="sobre" aria-selected="false">NOSSA HISTORIA</a></li>
+    <li><a href="#" class="tab-link" data-tab="contato" aria-selected="false">PARA SEMPRE</a></li>
+</ul>
+</nav>
+
+
+    <button class="theme-toggle">Alternar Tema</button>
+    <!-- Conteúdo das Abas -->
+    
+<main>
+    <div id="inicio" class="tab-content active">
+        <h2>OI MEU AMORZINHO, ESPERO QUE GOSTE VIDA &#x2764;</h2>
+        <p>Entâo meu amor, creio que voce deve estar sem sentender nada, mais desenvolvi esse site somente pra você minha vida
+            ele foi criado pensando totalmente em ti, todos os detalhes, todas as cores e a complexidade
+        </p>
+        <p>
+            Vida, eu so queria te dizer que passar todos esse tempo ao seu lado, foi umas das melhores escolhas da minha vida, pois a melhor foi quando eu descidi
+            colocar voçe como mulher da minha vida, ndepedente de dificuldades ou alguma coisa que nos atrapalhe, eu sempr estarei aqui para tudo que precisar !!!&#x2764;&#x2764;&#x2764;
+        </p>
+    </div>
+
+
+    
+    <div id="sobre" class="tab-content">
+        <h2>Galeria de Memórias</h2>
+        <div class="gallery">
+            <img src="https://i.ibb.co/Jt0Sr87/IMG-20240908-225932-286-1.webp" alt="Foto 1">
+            <img src="https://i.ibb.co/Jt0Sr87/IMG-20240908-225932-286-1.webp" alt="Foto 2">
+            <img src="https://i.ibb.co/Jt0Sr87/IMG-20240908-225932-286-1.webp" alt="Foto 3">
+        </div>
+    
+
+
+        <div class="container">
+
+            <img src="https://i.ibb.co/Jt0Sr87/IMG-20240908-225932-286-1.webp" class="imagem1">
+
+            <div class="text">
+
+        <h2>inicio</h2>
+        <p>Esta é a aba de <strong>Sobre</strong>. Adicione aqui informações sobre sua empresa, projeto ou história.</p>
+        </div>
+        </div>
+        
+        <div class="container">
+
+            <img src="https://i.ibb.co/Jt0Sr87/IMG-20240908-225932-286-1.webp" class="imagem1">
+
+            <div class="text">
+
+        <h2>PEDIDO DENAMORO</h2>
+        <p>DIVERSOS KSKKSSSKSKSS</p>
+        </div>
+        </div>
+        
+
+         <h2>BARREIRAS</h2>
+         <p>..</p>
+         FOTOS 
+
+         <h2>PRIMEIRA VIAGEM</h2>
+         <p>..</p>
+         FOTOS
+         
+    </div>
+    <div id="contato" class="tab-content">
+        <h2>Contato</h2>
+        <form id="contato-form">
+            <label for="nome">Nome:</label><br>
+            <input type="text" id="nome" name="nome" required><br><br>
+            <label for="email">E-mail:</label><br>
+            <input type="email" id="email" name="email" required><br><br>
+            <label for="mensagem">Mensagem:</label><br>
+            <textarea id="mensagem" name="mensagem" rows="5"></textarea><br><br>
+            <button type="submit">Enviar</button>
+            <p id="feedback" style="display: none; color: green; font-weight: bold;">Mensagem enviada com sucesso!</p>
+        </form>
+    </div>
+</main>
+
+<!-- Rodapé -->
+<footer>
+<p>&#x2764; 13/03/22 - NOSSO SIM - PARA SEMPRE HELO & ANDE &#x2764;</p>
+</footer>
+
+<!-- Script JavaScript -->
+<script>
+    // Selecionar todos os links e conteúdos das abas
+    const tabLinks = document.querySelectorAll('.tab-link');
+    const tabContents = document.querySelectorAll('.tab-content');
+
+    // Adicionar evento de clique em cada link
+    tabLinks.forEach(link => {
+        link.addEventListener('click', (e) => {
+            e.preventDefault();
+
+            // Remover classe "active" de todos os links e conteúdos
+            tabLinks.forEach(link => {
+                link.classList.remove('active');
+                link.setAttribute('aria-selected', 'false');
+            });
+            tabContents.forEach(content => content.classList.remove('active'));
+
+            // Adicionar classe "active" ao link e conteúdo clicado
+            const tabId = link.getAttribute('data-tab');
+            link.classList.add('active');
+            link.setAttribute('aria-selected', 'true');
+            document.getElementById(tabId).classList.add('active');
+        });
+    });
+
+    // Adicionar feedback ao enviar o formulário
+    const form = document.getElementById('contato-form');
+    form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        document.getElementById('feedback').style.display = 'block';
+        form.reset();
+    });
+
+    // Alternância de Tema
+    const themeToggle = document.querySelector('.theme-toggle');
+    themeToggle.addEventListener('click', () => {
+        document.body.classList.toggle('dark-mode');
+    });
+    </script>
+
+</body>
+</html>
